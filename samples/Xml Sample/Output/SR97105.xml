@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "JATS-journalpublishing1.dtd">
+<article xml:lang="en" article-type="research-article" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<front>
+<journal-meta>
+<journal-id journal-id-type="publisher-id">rssc</journal-id>
+<journal-title-group>
+<journal-title>Journal of the Royal Statistical Society: Series C (Applied Statistics)</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">0004-9573</issn>
+<issn pub-type="epub">1467-9876</issn>
+<publisher>
+<publisher-name>Oxford University Press</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1071/SR97105</article-id>
+<article-id pub-id-type="publisher-id">1467-9876.00386</article-id>
+<article-categories>
+<subj-group subj-group-type="category-toc-heading">
+<subject>Original Articles</subject>
+</subj-group>
+</article-categories>
+
+
+<title-group>
+<article-title>Particle density and the plummet balance</article-title>
+</title-group>
+
+
+<contrib-group>
+
+<contrib id="rssc00386-cr-0001" contrib-type="author">
+
+<name>
+<surname>Emerson</surname>
+<given-names>W. W.</given-names>
+</name>
+
+<xref ref-type="aff" rid="aff1"></xref>
+</contrib>
+
+<contrib id="rssc00386-cr-0002" contrib-type="author">
+<name>
+<surname>Weissmann</surname>
+<given-names>D.</given-names>
+</name>
+<xref ref-type="aff" rid="aff2"></xref>
+</contrib>
+
+
+<aff id="aff1"><institution>CSIRO Land and Water</institution>,<addr-line>PMB No. 2, Glen Osmond</addr-line>,<state>SA</state><postal-code>5064</postal-code>,<country country="AU">Australia</country> </aff>
+</contrib-group>
+
+
+
+<pub-date pub-type="cover" iso-8601-date="2000-01-01">
+<month>01</month>
+<year>2000</year>
+</pub-date>
+<pub-date pub-type="collection" iso-8601-date="2000-01-01">
+<day>01</day>
+<month>01</month>
+<year>2000</year>
+</pub-date>
+<pub-date pub-type="epub" iso-8601-date="2000-01-08">
+<day>08</day>
+<month>01</month>
+<year>2000</year>
+</pub-date>
+<volume>38</volume>
+<issue>1</issue>
+<fpage>203</fpage>
+<lpage>211</lpage>
+<history>
+<date date-type="received">
+<date>27</date>
+<month>10</month>
+<year>1997</year>
+</date>
+<date date-type="accepted">
+<date>13</date>
+<month>10</month>
+<year>1999</year>
+</date>
+</history>
+<permissions>
+<copyright-statement>&#x00A9; 2003 Royal Statistical Society</copyright-statement>
+<copyright-year>2003</copyright-year>
+<license xmlns:xlink="http://www.w3.org/1999/xlink" license-type="publisher-standard" xlink:href="https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model">
+<license-p>This article is published and distributed under the terms of the Oxford University Press, Standard Journals Publication Model (https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model)</license-p>
+</license>
+</permissions>
+<self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="SR97105.pdf"/>
+<abstract id="rssc00386-abs-0001" abstract-type="abstract">
+<title>Abstract</title>
+<p>Soil suspensions are usually characterised by the percentage weights of particles settling with velocities between defined limits, such as silt and clay. If percentages were measured sufficiently accurately by both the pipette method and a plummet balance, dry densities of fractions could be calculated and hence their composition inferred. The accuracy and precision of the pipette method were confirmed by the mass balance of particles in peptised suspensions of a red-brown earth subsoil and a kaolinite. Percentages indicated by a plummet balance were corrected for the actual densities of fractions measured separately. Residual differences from the pipette values showed that the balance was accurate but lacked the precision needed to deduce densities to 0.01 mg/mm<sup>3</sup>.</p>
+<p>Values of the density of clay fractions were deduced from the means of published percentages obtained by the two methods where replicate suspensions were used and also from the mean difference based on a comparison using 199 soil samples. For the latter, an underestimate of clay percentages indicated by the balance had first to be allowed for. Clay-deduced densities were in the range 2.802.83 mg/mm<sup>3</sup>, compared with 2.84 mg/mm<sup>3</sup> measured on the separated subsoil clay. The values are similar, probably because the clays are derived from mica. The density of the separated subsoil silt was 2.64 mg/mm<sup>3</sup>, less than quartz, because of the presence of feldspar. Such results indicate the potential use of the method if the precision of the balance is improved.</p>
+</abstract>
+<kwd-group>
+<kwd>particle size</kwd>
+<kwd>iron oxide</kwd>
+<kwd>tailings</kwd>
+<kwd>hydrometer</kwd>
+</kwd-group>
+<counts>
+<page-count count="10"/>
+</counts>
+</article-meta>
+</front>
+
+
+
+<body>
+
+</body>
+<back>
+<ref-list id="REF1">
+<title>References</title>
+<ref-list>
+
+<ref id="R1">
+<mixed-citation id="C1" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Buchan</surname><given-names>GD</given-names></string-name>
+<string-name><surname>Grewal</surname><given-names>KS</given-names></string-name>
+<string-name><surname>Claydon</surname><given-names>JJ</given-names></string-name>
+<string-name><surname>McPherson</surname><given-names>RJ</given-names></string-name>
+</person-group>.
+(<year>1993</year>)
+<article-title>
+A comparison of Sedigraph and pipette methods for soil particle-size analysis
+</article-title>.
+<source>Australian Journal of Soil Research</source>,
+<volume>31</volume>,
+<fpage>407</fpage>-<lpage>417</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R2">
+<mixed-citation id="C2" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Burford</surname><given-names>JR</given-names></string-name>
+<string-name><surname>Greenland</surname><given-names>DJ</given-names></string-name>
+<string-name><surname>Quirk</surname><given-names>JP</given-names></string-name>
+</person-group>.
+(<year>1962</year>)
+<article-title>
+Surface area determinations and the clay mineralogy of a Red Brown Earth
+</article-title>.
+<source>Nature</source>,
+<fpage>361</fpage>-<lpage>12</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R3">
+<mixed-citation id="C3" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Day</surname><given-names>PR</given-names></string-name>
+</person-group>.
+(<year>1953</year>)
+<article-title>
+Experimental confirmation of hydrometer theory
+</article-title>.
+<source>Soil Science</source>,
+<volume>75</volume>,
+<fpage>181</fpage>-<lpage>86</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R4">
+<mixed-citation id="C4" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Deshpande</surname><given-names>TL</given-names></string-name>
+<string-name><surname>Greenland</surname><given-names>DJ</given-names></string-name>
+<string-name><surname>Quirk</surname><given-names>JP</given-names></string-name>
+</person-group>.
+(<year>1968</year>)
+<article-title>
+Changes in soil properties associated with the removal of iron and aluminium oxides
+</article-title>.
+<source>Journal of Soil Science</source>,
+<volume>19</volume>,
+<fpage>108</fpage>-<lpage>122</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R5">
+<mixed-citation id="C5" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Emerson</surname><given-names>WW</given-names></string-name>
+</person-group>.
+(<year>1964</year>)
+<article-title>
+The slaking of soil crumbs as influenced by clay mineral composition
+</article-title>.
+<source>Australian Journal of Soil Research</source>,
+<volume>2</volume>,
+<fpage>211</fpage>-<lpage>217</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R6">
+<mixed-citation id="C6" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>Emerson</surname><given-names>WW</given-names></string-name>
+</person-group>.
+(<year>1983</year>)
+<article-title>
+Inter-particle bonding
+</article-title>.
+<source>Soils: an Australian viewpoint</source>.
+<publisher-name>CSIRO Australia/Academic Press</publisher-name>,
+<publisher-loc>London</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R7">
+<mixed-citation id="C7" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Emerson</surname><given-names>WW</given-names></string-name>
+<string-name><surname>Self</surname><given-names>PG</given-names></string-name>
+</person-group>.
+(<year>1994</year>)
+<article-title>
+Neutralized tailings and sulphates: evaluating bulk properties
+</article-title>.
+<source>Geotechnique</source>,
+<volume>44</volume>,
+<fpage>495</fpage>-<lpage>501</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R8">
+<mixed-citation id="C8" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Greenland</surname><given-names>DJ</given-names></string-name>
+<string-name><surname>Oades</surname><given-names>JM</given-names></string-name>
+<string-name><surname>Sherwin</surname><given-names>TW</given-names></string-name>
+</person-group>.
+(<year>1968</year>)
+<article-title>
+Electron-microscope observations of iron oxides in some red soils
+</article-title>.
+<source>Journal of Soil Science</source>,
+<volume>19</volume>,
+<fpage>123</fpage>-<lpage>126</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R9">
+<mixed-citation id="C9" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>Huang</surname><given-names>PM</given-names></string-name>
+</person-group>.
+(<year>1977</year>)
+<article-title>
+Feldspars, olivines, pyroxenes and amphiboles
+</article-title>.
+<source>Minerals in soil environments</source>.
+<publisher-name>SSSA</publisher-name>,
+<publisher-loc>Madison, WI</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R10">
+<mixed-citation id="C10" publication-type="report">
+<person-group person-group-type="author">
+<string-name><surname>Hutton</surname><given-names>JT</given-names></string-name>
+</person-group>.
+(<year>1955</year>)
+<article-title>
+A method of particle size analysis of soils
+</article-title>.
+<source>Divisional Report No. 11, CSIRO Division of Soils</source>.
+<publisher-name>CSIRO</publisher-name>,
+<publisher-loc>Adelaide</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R11">
+<mixed-citation id="C11" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>ICT</surname><given-names></given-names></string-name>
+</person-group>.
+(<year>1932</year>)
+<article-title>
+International Critical Tables, III, 79
+</article-title>.
+<source>None</source>.
+</mixed-citation>
+</ref>
+
+<ref id="R12">
+<mixed-citation id="C12" publication-type="conference">
+<person-group person-group-type="author">
+<string-name><surname>ISSS</surname><given-names></given-names></string-name>
+</person-group>.
+(<year>1934</year>)
+<article-title>
+Trans. 1st Comm. International Society of Soil Science
+</article-title>.
+<source>None</source>,
+<fpage>303</fpage>-<lpage>304</lpage>.
+<publisher-loc>Versailles</publisher-loc>:
+</mixed-citation>
+</ref>
+
+<ref id="R13">
+<mixed-citation id="C13" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>Isbell</surname><given-names>RF</given-names></string-name>
+</person-group>.
+(<year>1996</year>)
+<article-title>
+The Australian soil classification
+</article-title>.
+<source>None</source>.
+<publisher-name>CSIRO Publishing</publisher-name>,
+<publisher-loc>Melbourne</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R14">
+<mixed-citation id="C14" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>Lambe</surname><given-names>TW</given-names></string-name>
+</person-group>.
+(<year>1951</year>)
+<article-title>
+Soil testing for engineers. Ch. II. Specific gravity test
+</article-title>.
+<source>None</source>.
+<publisher-name>John Wiley &amp; Sons</publisher-name>,
+<publisher-loc>New York</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R15">
+<mixed-citation id="C15" publication-type="report">
+<person-group person-group-type="author">
+<string-name><surname>Litchfield</surname><given-names>WH</given-names></string-name>
+</person-group>.
+(<year>1951</year>)
+<article-title>
+Soil Survey of the Waite Agricultural Research Institute
+</article-title>.
+<source>Divisional Report 2/51, CSIRO</source>.
+<publisher-name>CSIRO</publisher-name>,
+<publisher-loc>Adelaide</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R16">
+<mixed-citation id="C16" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>McIntyre</surname><given-names>DS</given-names></string-name>
+</person-group>.
+(<year>1974</year>)
+<article-title>
+Definitions of particle size by settling velocity and standard sieves
+</article-title>.
+<source>Methods for analysis of irrigated soils</source>.
+<publisher-name>CAB and CSIRO</publisher-name>.
+</mixed-citation>
+</ref>
+
+<ref id="R17">
+<mixed-citation id="C17" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>McIntyre</surname><given-names>DS</given-names></string-name>
+<string-name><surname>Loveday</surname><given-names>J</given-names></string-name>
+</person-group>.
+(<year>1974</year>)
+<article-title>
+Particle-size analysis
+</article-title>.
+<source>Methods for analysis of irrigated soils</source>.
+<publisher-name>CAB and CSIRO</publisher-name>.
+</mixed-citation>
+</ref>
+
+<ref id="R18">
+<mixed-citation id="C18" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Marshall</surname><given-names>TJ</given-names></string-name>
+</person-group>.
+(<year>1956</year>)
+<article-title>
+A plummet balance for measuring the size distribution of soil particles
+</article-title>.
+<source>Australian Journal of Applied Science</source>,
+<volume>7</volume>,
+<fpage>142</fpage>-<lpage>147</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R19">
+<mixed-citation id="C19" publication-type="report">
+<person-group person-group-type="author">
+<string-name><surname>Merry</surname><given-names>RH</given-names></string-name>
+</person-group>.
+(<year>1985</year>)
+<article-title>
+A summary listing of the archival soils collection of the Division of Soils
+</article-title>.
+<source>Divisional Report No. 80</source>.
+<publisher-name>CSIRO</publisher-name>,
+<publisher-loc>Adelaide</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R20">
+<mixed-citation id="C20" publication-type="book">
+<person-group person-group-type="author">
+<string-name><surname>Norrish</surname><given-names>K</given-names></string-name>
+<string-name><surname>Pickering</surname><given-names>JG</given-names></string-name>
+</person-group>.
+(<year>1983</year>)
+<article-title>
+Clay Minerals
+</article-title>.
+<source>Soils: an Australian viewpoint</source>.
+<publisher-name>CSIRO</publisher-name>,
+<publisher-loc>Melbourne/Academic Press: London</publisher-loc>.
+</mixed-citation>
+</ref>
+
+<ref id="R21">
+<mixed-citation id="C21" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Radoslovich</surname><given-names>EW</given-names></string-name>
+</person-group>.
+(<year>1958</year>)
+<article-title>
+Clay mineralogy of some Australian red-brown earths
+</article-title>.
+<source>Journal of Soil Science</source>,
+<volume>9</volume>,
+<fpage>242</fpage>-<lpage>251</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R22">
+<mixed-citation id="C22" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Sheldrick</surname><given-names>BK</given-names></string-name>
+<string-name><surname>McKeague</surname><given-names>JA</given-names></string-name>
+</person-group>.
+(<year>1976</year>)
+<article-title>
+Tests of the plummet balance and a comparison of some procedures for particle size analysis
+</article-title>.
+<source>Canadian Journal of Soil Science</source>,
+<volume>56</volume>,
+<fpage>55</fpage>-<lpage>57</lpage>.
+</mixed-citation>
+</ref>
+
+<ref id="R23">
+<mixed-citation id="C23" publication-type="journal">
+<person-group person-group-type="author">
+<string-name><surname>Slager</surname><given-names>S</given-names></string-name>
+<string-name><surname>Koenigs</surname><given-names>FFR</given-names></string-name>
+</person-group>.
+(<year>1964</year>)
+<article-title>
+Particle size analysis of soils by means of a torsion balance and a plummet
+</article-title>.
+<source>Sedimentology</source>,
+<volume>3</volume>,
+<fpage>240</fpage>-<lpage>52</lpage>.
+</mixed-citation>
+</ref>
+
+</ref-list>
+
+</ref-list>
+</back>

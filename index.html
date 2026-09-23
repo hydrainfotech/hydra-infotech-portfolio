@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HYDRA INFOTECH | IT Enabled Services & Data Processing</title>
+<meta name="description" content="HYDRA INFOTECH provides data entry, BPO, document digitization, EPUB conversion, OCR correction, XML conversion and historical records transcription.">
+<style>
+/* ================= HYDRA  THEME & ANIMATION ENGINE ================= */
+:root {
+  --bg: #f5f7ff;
+  --bg2: #e9edff;
+  --surface: rgba(255,255,255,.90);
+  --surface2: rgba(192,30,140,.04);
+  --text: #17182a;
+  --muted: #5f6478;
+  --line: rgba(192,30,140,.12);
+  --accent: #c01e8c;
+  --accent2: #9333ea;
+  --accent3: #ff4fd8;
+  --shadow: 0 22px 60px rgba(192,30,140,.10);
+  --navy: #10233f;
+  --blue: #c01e8c;
+  --code-bg: #ffffff;
+  --code-text: #0969da;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(192,30,140,.08), transparent 28%),
+    radial-gradient(circle at 88% 22%, rgba(147,51,234,.06), transparent 26%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(192,30,140,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192,30,140,.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+a { text-decoration: none; color: inherit; }
+.container { width: min(1160px, 92%); margin: auto; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 22px; font-weight: 800; color: var(--text); }
+.logo span { color: var(--accent); }
+
+nav { display: flex; gap: 25px; align-items: center; }
+nav a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color .2s; }
+nav a:hover { color: var(--accent); }
+
+.menu { display: none; border: 0; background: none; font-size: 28px; color: var(--text); cursor: pointer; }
+
+.btn { display: inline-block; padding: 13px 22px; border-radius: 8px; font-weight: 700; font-size: 14px; position: relative; overflow: hidden; isolation: isolate; transition: transform .25s, box-shadow .25s; }
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; box-shadow: 0 12px 35px rgba(192,30,140,.22); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 45px rgba(192,30,140,.32); }
+.btn-outline { border: 1px solid var(--line); margin-left: 8px; color: var(--text); background: var(--surface2); }
+
+.hero { padding: 100px 0 90px; position: relative; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: center; }
+.eyebrow, .section-label { color: var(--accent); font-size: 20px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
+h1 { font-size: clamp(40px, 5vw, 68px); line-height: 1.08; color: var(--text); margin-bottom: 24px; }
+.hero p { font-size: 18px; color: var(--muted); margin-bottom: 30px; }
+
+.hero-card, .card, .value, .step, .industry {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+.card:hover, .step:hover, .industry:hover {
+  transform: translateY(-6px);
+  border-color: rgba(192,30,140,.35);
+  box-shadow: 0 20px 50px rgba(192,30,140,.15);
+}
+.hero-card h3 { color: var(--text); margin-bottom: 15px; }
+.check { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.check b { color: var(--accent); margin-right: 8px; }
+
+.trust { padding: 24px 0; border-bottom: 1px solid var(--line); background: var(--surface2); }
+.trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.trust-item { font-size: 14px; font-weight: 700; color: var(--muted); }
+.trust-item:not(:last-child) { border-right: 1px solid var(--line); }
+
+section { padding: 90px 0; }
+.alt { background: var(--bg2); }
+.section-head { max-width: 800px; margin-bottom: 45px; }
+h2 { font-size: 38px; line-height: 1.2; color: var(--text); margin: 10px 0 14px; }
+.section-head p { color: var(--muted); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; }
+.quote { border-left: 4px solid var(--accent); padding-left: 22px; font-size: 23px; font-weight: 700; color: var(--text); margin-bottom: 25px; }
+.about p { color: var(--muted); margin-bottom: 15px; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(192,30,140,.1); color: var(--accent); display: grid; place-items: center; font-weight: 900; margin-bottom: 16px; border: 1px solid rgba(192,30,140,.2); }
+.card h3 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 14px; color: var(--muted); }
+
+.values { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.value { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); }
+.value strong { display: block; color: var(--text); }
+.value span { font-size: 14px; color: var(--muted); }
+
+.process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.step { border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: var(--surface); box-shadow: var(--shadow); }
+.step-num { font-size: 11px; font-weight: 800; color: var(--accent); }
+.step h3 { font-size: 16px; color: var(--text); margin: 12px 0 6px; }
+.step p { font-size: 13px; color: var(--muted); }
+
+.industries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.industry { padding: 20px; border: 1px solid var(--line); border-radius: 12px; font-weight: 700; color: var(--text); background: var(--surface); box-shadow: var(--shadow); }
+
+.commitment { background: var(--bg2); color: var(--text); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.commitment h2 { color: var(--text); }
+.commitment p { color: var(--muted); max-width: 850px; }
+
+.cta { background: var(--surface2); text-align: center; border-top: 1px solid var(--line); }
+.cta p { max-width: 700px; margin: 0 auto 25px; color: var(--muted); }
+
+footer { background: #101524; color: #b9c6d7; padding: 50px 0 25px; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 45px; }
+footer h3 { color: #fff; margin-bottom: 12px; }
+footer p, footer li { font-size: 14px; margin-bottom: 7px; }
+footer ul { list-style: none; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 30px; padding-top: 18px; text-align: center; font-size: 12px; }
+
+/* Showcase / Portfolio Work Tabs */
+.work-showcase { margin-top: 10px; }
+.work-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+.work-tab { border: 0; background: var(--surface); color: var(--text); padding: 13px 20px; border-radius: 11px; font-size: 14px; font-weight: 700; cursor: pointer; transition: .25s; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,.04); }
+.work-tab:hover { background: rgba(192,30,140,.08); }
+.work-tab.active { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 8px 18px rgba(192,30,140,.25); border-color: transparent; }
+
+.work-panel { background: var(--bg2); color: var(--text); border-radius: 24px; padding: 40px; box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; animation: fadeIn .4s ease; }
+.work-panel.hidden { display: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.work-top { display: flex; justify-content: space-between; gap: 28px; align-items: flex-start; padding-bottom: 27px; border-bottom: 1px solid var(--line); }
+.work-kicker { color: var(--accent); font-family: "Courier New", monospace; font-size: 12px; font-weight: 700; letter-spacing: .5px; margin-bottom: 8px; text-transform: uppercase; }
+.work-title { font-size: 25px; line-height: 1.25; color: var(--text); margin-bottom: 6px; }
+.work-description { font-size: 14px; color: var(--muted); max-width: 820px; }
+.work-status { min-width: 185px; border: 1px solid rgba(192,30,140,.3); background: rgba(192,30,140,.07); color: var(--accent); border-radius: 9px; padding: 8px 12px; font: 12px/1.35 "Courier New", monospace; font-weight: 700; }
+
+.work-content { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 25px; align-items: stretch; }
+.work-box { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; min-width: 0; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.work-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .35px; margin-bottom: 12px; }
+
+.work-image-wrap { background: var(--code-bg); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 16px; flex: 1; min-height: 320px; }
+.work-image-wrap img { width: 100%; height: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; display: block; }
+
+.work-code { background: var(--code-bg); border: 1px solid var(--line); border-radius: 12px; padding: 18px; color: var(--code-text); font: 12px/1.7 "Courier New", monospace; white-space: pre-wrap; flex: 1; max-height: 380px; overflow-y: auto; box-shadow: inset 0 2px 6px rgba(0,0,0,.03); }
+
+.work-table-wrap { overflow: auto; background: var(--code-bg); border: 1px solid var(--line); border-radius: 12px; }
+.work-table { width: 100%; border-collapse: collapse; min-width: 520px; font-size: 12px; }
+.work-table th, .work-table td { padding: 13px 11px; text-align: left; border-bottom: 1px solid var(--line); }
+.work-table th { color: var(--muted); font-family: "Courier New", monospace; background: var(--bg2); }
+.work-table td { color: var(--text); }
+.work-caption { margin-top: 15px; text-align: center; color: var(--muted); font-size: 12px; }
+
+.logo-image { display: flex; align-items: center; height: 50px; width: auto; }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media(max-width:850px){
+  nav { display: none; position: absolute; top: 76px; left: 0; width: 100%; background: var(--surface); padding: 20px; flex-direction: column; align-items: flex-start; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  nav.open { display: flex; }
+  .menu { display: block; }
+  .hero-grid, .about-grid, .work-content { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .process { grid-template-columns: repeat(2, 1fr); }
+  .industries { grid-template-columns: repeat(2, 1fr); }
+  .work-top { flex-direction: column; }
+  .work-status { width: 100%; }
+}
+@media(max-width:560px){
+  section { padding: 65px 0; }
+  h2 { font-size: 30px; }
+  .cards, .values, .process, .industries, .footer-grid { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; gap: 12px; }
+  .trust-item:not(:last-child) { border-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <img class="logo logo-image" src="images/hydra_logo_black_text_transparent_crop (1).png" alt="Hydra Infotech Logo">
+    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#works">Our Works</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero reveal" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">IT ENABLED SERVICES</div>
+      <h1>Reliable Digital Processing. Built for Accuracy.</h1>
+      <p>We transform documents, images, and handwritten records into accurate, structured digital formats through skilled professionals, efficient workflows, and quality-focused processes.</p>
+      <a class="btn btn-primary" href="#services">Explore Our Services</a>
+      <a class="btn btn-outline" href="#contact">Start a Project</a>
+    </div>
+    <div class="hero-card">
+      <h3>What We Deliver</h3>
+      <div class="check"><b>✓</b>Accurate data entry & document processing</div>
+      <div class="check"><b>✓</b>Historical records digitization</div>
+      <div class="check"><b>✓</b>PDF to EPUB conversion</div>
+      <div class="check"><b>✓</b>OCR correction & validation</div>
+      <div class="check"><b>✓</b>XML conversion & metadata tagging</div>
+      <div class="check"><b>✓</b>Secure, scalable outsourcing support</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">Accuracy</div>
+    <div class="trust-item">Speed</div>
+    <div class="trust-item">Quality & Secure Data Handling</div>
+  </div>
+</div>
+
+<section id="about" class="reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">About Us</div>
+      <h2>Turning Complex Documents Into Usable Digital Assets</h2>
+      <p>Professional IT-enabled outsourcing for businesses, publishers, researchers, libraries, archives and other organizations.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about">
+        <div class="quote">“We believe our clients' success is our success — combining skilled manpower, efficient processes, and a customer-first approach.”</div>
+        <p>Our commitment to excellence, confidentiality, and timely delivery has made us a trusted outsourcing partner for businesses of all sizes.</p>
+        <p>We specialize in digital document processing services, including ePub creation, data entry, OCR correction, and historical document transcription.</p>
+      </div>
+      <div class="about">
+        <p>We work with publishers, genealogy projects, libraries, researchers, and businesses worldwide, delivering accurate and high-quality solutions for one-time projects and long-term outsourcing requirements.</p>
+        <p>Our customized services help organizations improve productivity, streamline processes, and reduce operational costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Mission · Vision · Core Values</div>
+      <h2>What Guides Our Work</h2>
+    </div>
+    <div class="cards" style="margin-bottom:30px">
+      <div class="card">
+        <div class="icon">M</div>
+        <h3>Mission</h3>
+        <p><strong>Delivering Reliable Solutions with Lasting Value.</strong><br>To provide reliable, efficient, and innovative IT-enabled outsourcing solutions that enhance productivity, streamline operations, and deliver measurable value.</p>
+      </div>
+      <div class="card">
+        <div class="icon">V</div>
+        <h3>Vision</h3>
+        <p><strong>Building Trust Through Excellence.</strong><br>To establish ourselves as a trusted IT-enabled services partner through high-quality solutions, innovation, and strong long-term relationships.</p>
+      </div>
+    </div>
+    <div class="values">
+      <div class="value"><strong>Integrity</strong><span>Honesty and transparency in every interaction.</span></div>
+      <div class="value"><strong>Excellence</strong><span>Quality and precision in everything we deliver.</span></div>
+      <div class="value"><strong>Customer Focus</strong><span>Understanding client needs and striving to exceed expectations.</span></div>
+      <div class="value"><strong>Innovation</strong><span>Embracing technology and better ways of working.</span></div>
+      <div class="value"><strong>Confidentiality</strong><span>Protecting client information with care and responsibility.</span></div>
+      <div class="value"><strong>Reliability</strong><span>Delivering consistently, accurately, and on time.</span></div>
+      <div class="value"><strong>Continuous Improvement</strong><span>Continuously refining our processes, skills, and services.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Core Competencies</div>
+      <h2>Comprehensive Digitization & Data Services</h2>
+      <p>Specialized digital processing supported by trained professionals, structured workflows, and rigorous quality control.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">01</div><h3>PDF to EPUB Conversion</h3><p>Professional conversion into reflowable and fixed-layout EPUB formats with clean formatting, typography, XHTML structure, embedded fonts, and navigation.</p></div>
+      <div class="card"><div class="icon">02</div><h3>Historical Records Digitization</h3><p>Transcription of birth, death, marriage records, historical documents, and financial ledgers into structured Excel, CSV, and database-ready formats.</p></div>
+      <div class="card"><div class="icon">03</div><h3>KYC & Demographic Data Entry</h3><p>Secure processing of KYC documents and demographic information with verification procedures.</p></div>
+      <div class="card"><div class="icon">04</div><h3>Document & Petition Processing</h3><p>Conversion of scanned and unstructured documents into standardized Word and PDF formats with structured fields and metadata.</p></div>
+      <div class="card"><div class="icon">05</div><h3>XML Conversion & Metadata</h3><p>Structured XML creation and metadata tagging for publishing, scholarly, and business content, including JATS, TEI, and customized schemas.</p></div>
+      <div class="card"><div class="icon">06</div><h3>OCR Correction & Validation</h3><p>Review and correction of OCR-generated content through automated checks and expert verification.</p></div>
+      <div class="card"><div class="icon">07</div><h3>Quality Assurance & Auditing</h3><p>Multi-level quality checks, discrepancy identification, and final verification.</p></div>
+      <div class="card"><div class="icon">08</div><h3>Secure Data Processing</h3><p>Confidential handling of client information through controlled access and secure workflows.</p></div>
+      <div class="card"><div class="icon">09</div><h3>Technical Support</h3><p>Reliable operational and technical support for efficient digital workflows and project continuity.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Why HYDRA INFOTECH</div>
+      <h2>Precision Meets Reliability</h2>
+      <p>We combine precision, technology, and secure data processing to deliver consistent quality, accuracy, and confidentiality.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">✓</div><h3>Experienced Team</h3><p>Skilled professionals with expertise in document digitization across diverse domains and formats.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Attention to Detail</h3><p>Every character, field, and document structure is carefully reviewed for accuracy.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Timely Delivery</h3><p>Efficient workflows and dependable turnaround times to meet project deadlines.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Secure Data Handling</h3><p>Client information is handled with confidentiality, care, and integrity.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Scalable Solutions</h3><p>From individual documents to large-scale archives, our workflows can scale with requirements.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Custom Formatting</h3><p>Structured outputs tailored to your specific requirements and workflow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Our Process</div>
+      <h2>A Structured Workflow From Input to Delivery</h2>
+      <p>Clear project stages help maintain consistency, quality, and accountability.</p>
+    </div>
+    <div class="process">
+      <div class="step"><div class="step-num">STEP 01</div><h3>Receive</h3><p>Collect documents, images, specifications, and project requirements.</p></div>
+      <div class="step"><div class="step-num">STEP 02</div><h3>Process</h3><p>Apply trained workflows, tools, and domain-specific processing.</p></div>
+      <div class="step"><div class="step-num">STEP 03</div><h3>Verify</h3><p>Perform quality checks, validation, and discrepancy review.</p></div>
+      <div class="step"><div class="step-num">STEP 04</div><h3>Quality Control</h3><p>Conduct final audits against agreed specifications.</p></div>
+      <div class="step"><div class="step-num">STEP 05</div><h3>Deliver</h3><p>Provide structured, delivery-ready digital files in the required format.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="alt reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Our Works</div>
+      <h2>Selected Project Samples</h2>
+      <p>Examples of our digital publishing, historical records digitization, and structured XML processing workflows.</p>
+    </div>
+    <div class="work-showcase">
+      <div class="work-tabs">
+        <button class="work-tab active" onclick="showWork('epub',this)">📖 EPUB Conversion</button>
+        <button class="work-tab" onclick="showWork('history',this)">🏛 Historical Records to Excel</button>
+        <button class="work-tab" onclick="showWork('xml',this)">&lt;/&gt; XML Tagging &amp; Metadata</button>
+      </div>
+
+      <!-- EPUB Panel -->
+      <div class="work-panel" id="work-epub">
+        <div class="work-top">
+          <div>
+            <div class="work-kicker">Workflow: Digital Publishing</div>
+            <h3 class="work-title">PDF to Reflowable / Fixed EPUB Conversion</h3>
+            <p class="work-description">Transforming complex print layouts into clean XHTML-based EPUB files with embedded fonts, structured content, and active navigation.</p>
+          </div>
+          <div class="work-status">Status: Validated EPUB3</div>
+        </div>
+        <div class="work-content">
+          <div class="work-box">
+            <div class="work-label">Sample Project Preview</div>
+            <div class="work-image-wrap">
+              <img src="images/Epub.jpg" alt="EPUB Preview">
+            </div>
+          </div>
+          <div class="work-box">
+            <div class="work-label">EPUB XHTML Output</div>
+            <div class="work-code">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="es" lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"/&gt;
+&lt;title&gt;Comportamiento estructural de muros delgados&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="../css/book.css"/&gt;
+&lt;/head&gt;
+&lt;body epub:type="bodymatter"&gt;
+&lt;section epub:type="chapter"&gt;
+&lt;header&gt;
+&lt;h1 class="lb"&gt;&lt;span id="p13" aria-label="page 13" epub:type="pagebreak" role="doc-pagebreak"/&gt;CAPÍTULO 1&lt;/h1&gt;
+&lt;h1 class="lb1"&gt;INTRODUCCIÓN&lt;/h1&gt;
+&lt;/header&gt;
+&lt;p class="a"&gt;Colombia es un país con alta amenaza sísmica; los registros de&lt;/p&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+          </div>
+        </div>
+        <div class="work-caption">PDF layout → OCR / correction → XHTML structure → validated EPUB3</div>
+      </div>
+
+      <!-- Historical Records Panel -->
+      <div class="work-panel hidden" id="work-history">
+        <div class="work-top">
+          <div>
+            <div class="work-kicker">Workflow: Parish Registers &amp; Old Bank Ledgers</div>
+            <h3 class="work-title">Birth, Death, Marriage &amp; Old Bank Records Digitization</h3>
+            <p class="work-description">Transcribing handwritten historical records into structured Excel spreadsheets with consistent fields and quality verification.</p>
+          </div>
+          <div class="work-status">Status: Verified &amp; Exported</div>
+        </div>
+        <div class="work-content">
+          <div class="work-box">
+            <div class="work-label">Sample Project Preview</div>
+            <div class="work-image-wrap">
+              <img src="images/bv1.png" alt="Historical Ledger Preview">
+            </div>
+          </div>
+          <div class="work-box">
+            <div class="work-label">Structured Excel Output Format</div>
+            <div class="work-table-wrap" style="margin-bottom: 12px;">
+              <table class="work-table">
+                <thead>
+                  <tr>
+                    <th>Main Folder ID</th>
+                    <th>Form_Type</th>
+                    <th>Event_Year</th>
+                    <th>Municipality</th>
+                    <th>Given_Name</th>
+                    <th>Surname</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>_1XXX_1XXX</td>
+                    <td>Death</td>
+                    <td>1821</td>
+                    <td>Aspelare</td>
+                    <td>Augustinus</td>
+                    <td>De Loose</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="work-code" style="min-height: 120px;">Record Date: March 1, 1821
+Municipality: Aspelare, Aalst
+Subject: Augustinus De Loose (Age: 68)
+Parents: Egidius De Loose &amp; Marianna Haegeman
+Output Format: Excel / CSV / Database-Ready</div>
+          </div>
+        </div>
+        <div class="work-caption">Historical document → transcription → verification → structured Excel delivery</div>
+      </div>
+
+      <!-- XML Tagging Panel -->
+      <div class="work-panel hidden" id="work-xml">
+        <div class="work-top">
+          <div>
+            <div class="work-kicker">Workflow: Scholarly &amp; Corporate Publishing</div>
+            <h3 class="work-title">XML Tagging &amp; Metadata Conversion</h3>
+            <p class="work-description">Precision structural XML creation, front/back matter tagging, metadata extraction, and bibliographic reference embedding.</p>
+          </div>
+          <div class="work-status">Status: Schema Validated</div>
+        </div>
+        <div class="work-content">
+          <div class="work-box">
+            <div class="work-label">Sample Project Preview</div>
+            <div class="work-image-wrap">
+              <img src="images/xml.jpg" alt="XML tagging sample">
+            </div>
+          </div>
+          <div class="work-box">
+            <div class="work-label">Structured XML Deliverable</div>
+            <div class="work-code">&lt;back&gt;
+&lt;ref-list id="rssc00386-bibl-0001"&gt;
+&lt;title&gt;References&lt;/title&gt;
+&lt;ref id="rssc00386-bib-1"&gt;
+&lt;mixed-citation id="rssc00386-cit-1" publication-type="journal"&gt;
+&lt;person-group person-group-type="author"&gt;
+&lt;string-name&gt;&lt;surname&gt;Alstrup&lt;/surname&gt;, &lt;given-names&gt;J.&lt;/given-names&gt;&lt;/string-name&gt;
+&lt;/person-group&gt;
+ (&lt;year&gt;1989&lt;/year&gt;) &lt;article-title&gt;Booking control increases profit at Scandinavian Airlines&lt;/article-title&gt;. &lt;source&gt;Interfaces&lt;/source&gt;, &lt;volume&gt;19&lt;/volume&gt;, &lt;fpage&gt;10&lt;/fpage&gt;–&lt;lpage&gt;19&lt;/lpage&gt;.
+&lt;/mixed-citation&gt;
+&lt;/ref&gt;
+&lt;/back&gt;</div>
+          </div>
+        </div>
+        <div class="work-caption">Manuscript → semantic tagging → metadata → references → validated XML</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="reveal">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Industries We Serve</div>
+      <h2>Supporting Organizations Across Diverse Domains</h2>
+      <p>Specialized digitization, data processing, and IT-enabled services for organizations with varied document and workflow needs.</p>
+    </div>
+    <div class="industries">
+      <div class="industry">Publishers &amp; Media</div>
+      <div class="industry">Research Organizations</div>
+      <div class="industry">Educational Institutions</div>
+      <div class="industry">Libraries &amp; Archives</div>
+      <div class="industry">Genealogy Organizations</div>
+      <div class="industry">Businesses &amp; Enterprises</div>
+      <div class="industry">Legal Firms</div>
+      <div class="industry">Financial &amp; Documentation Services</div>
+    </div>
+  </div>
+</section>
+
+<section class="commitment reveal">
+  <div class="container">
+    <div class="section-label" style="color:#ff4fd8">Our Commitment</div>
+    <h2>Professionalism. Precision. Confidentiality.</h2>
+    <p>At HYDRA INFOTECH, we are committed to delivering every project with professionalism, precision, and the highest standards of confidentiality. By combining skilled professionals, efficient processes, advanced technology, and a customer-focused approach, we deliver reliable outsourcing solutions that support business growth, improve operational efficiency, and create lasting value for our clients.</p>
+  </div>
+</section>
+
+<section class="cta reveal" id="contact">
+  <div class="container">
+    <div class="section-label">Let's Work Together</div>
+    <h2>Have a Document Processing Project?</h2>
+    <p>Tell us about your project requirements, document volume, output format, and timeline. Our team can help define a suitable workflow.</p>
+    <a class="btn btn-primary" href="mailto:info@hydrainfotech.in">Contact HYDRA INFOTECH</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3>HYDRA INFOTECH</h3>
+      <p>IT-enabled services, data entry, BPO, document digitization, publishing support, OCR correction, XML conversion and structured data processing.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#works">Our Works</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <a href="https://www.hydrainfotech.in/">www.hydrainfotech.in</a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infotechhydra@gmail.com"
+   target="_blank"
+   rel="noopener">
+    infotechhydra@gmail.com
+</a>
+      
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 HYDRA INFOTECH. All rights reserved.</div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('nav').classList.toggle('open');
+}
+document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => document.getElementById('nav').classList.remove('open')));
+
+function showWork(name, button){
+  document.querySelectorAll('.work-panel').forEach(p => p.classList.add('hidden'));
+  document.getElementById('work-' + name).classList.remove('hidden');
+  document.querySelectorAll('.work-tab').forEach(t => t.classList.remove('active'));
+  button.classList.add('active');
+}
+
+// Intersection Observer for Smooth Reveal Animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
